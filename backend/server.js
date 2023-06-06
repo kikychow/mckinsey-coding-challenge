@@ -28,7 +28,6 @@ app.get("/reports", (req, res) => {
 app.put("/reports/:reportId", (req, res) => {
   const reportId = req.params.reportId;
   const { ticketState } = req.body;
-  console.log(ticketState);
 
   let reports = getReportsData();
   let report = reports.elements.find((report) => report.id === reportId);
@@ -36,10 +35,9 @@ app.put("/reports/:reportId", (req, res) => {
   if (report) {
     report.state = ticketState;
     saveReportsData(reports);
-    console.log(reports);
-    res.status(200).json({ message: "Report status updated successfully" });
+    res.status(200).send({ message: "Report status updated successfully" });
   } else {
-    res.status(404).json({ error: "Report not found" });
+    res.status(404).send({ error: "Report not found" });
   }
 });
 

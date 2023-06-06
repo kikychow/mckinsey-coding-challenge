@@ -19,7 +19,7 @@ function ReportList(props) {
   return (
     <div>
       {reportItems.map((item) => {
-        return item.state === "OPEN" || item.state === "BLOCKED" ? (
+        return item.state === "OPEN" ? (
           <ReportItem
             key={item.id}
             id={item.id}

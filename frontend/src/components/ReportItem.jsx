@@ -5,7 +5,6 @@ function ReportItem(props) {
   const resolvedState = "CLOSED";
 
   const updateReportState = async (reportId, newState) => {
-    console.log(reportId);
     var response = await fetch(`http://127.0.0.1:3001/reports/${reportId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
