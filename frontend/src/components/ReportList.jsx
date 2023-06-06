@@ -22,6 +22,9 @@ function ReportList(props) {
           <ReportItem
             key={item.id}
             id={item.id}
+            state={item.state}
+            type={item.payload?.reportType}
+            message={item.payload?.message}
           />
         );
       })}
