@@ -7,15 +7,14 @@
   border: 1px solid black;
 }
 
-.report-card button{
+.button-container button{
   border-radius: 5px;
-  margin: 10px;
-  width: 150px;
+  margin: 5px;
+  min-width: 100px;
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
 }
